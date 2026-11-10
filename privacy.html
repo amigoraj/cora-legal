@@ -34,7 +34,7 @@
 </header>
 <p class="sub">Cora: Phone Cleaner &amp; Storage · Effective 10 November 2026 (version 1.2)</p>
 
-<div class="note"><strong>The short version.</strong> Cora works on your phone. Your photos, videos, files, contacts and app information are read on your phone and never uploaded. We run no server, have no account system and show <strong>no ads</strong>. Cora connects only to Google Play (when you buy or restore Premium, or if you turn on the optional version check) and to Cloudflare's public speed test, only when you tap "Test speed".</div>
+<div class="note"><strong>The short version.</strong> Cora works on your phone. Your photos, videos, files, contacts and app information are read on your phone and never uploaded. We run no server, have no account system and show <strong>no ads</strong>. Cora connects only to Google Play (when you buy or restore Premium, or if you turn on the optional version check) and to Cloudflare's public speed test, only when you tap "Test speed". If you connect Gmail, Cora reads email details from Google directly onto your phone (section 4).</div>
 
 <h2>1. Who we are</h2>
 <p>Cora ("Cora", "we", "us") is a storage and video tool for Android, published on Google Play by the developer named on its Google Play listing. For any privacy question, email <a href="mailto:friendlink00@gmail.com">friendlink00@gmail.com</a>.</p>
@@ -66,15 +66,24 @@
 <h3>Speed test — Cloudflare (only when you tap)</h3>
 <p>In Network Doctor, "Test speed" downloads from and uploads random data to Cloudflare's public speed test (speed.cloudflare.com) for a few seconds. As with any website, Cloudflare sees your IP address. No personal data, files or identifiers are sent, and nothing runs unless you tap. See the <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare Privacy Policy</a>.</p>
 
-<h2>4. Gmail (when this feature is available)</h2>
-<p>A future version of Cora may let you connect a Gmail account to see what fills your mailbox and clean it up. If and when you choose to connect one:</p>
+<h2>4. Gmail and Google user data</h2>
+<p>Cora's email cleaner is optional. It works only if you connect a Gmail account yourself, with Google's own sign-in screen. Until then Cora has no access to your email.</p>
+<h3>What Cora accesses, and why</h3>
+<div class="tbl"><table>
+<tr><th>Google permission</th><th>What Cora reads or does</th><th>Why</th></tr>
+<tr><td>Read email details (<code>gmail.metadata</code>)</td><td>For each email: sender, subject, date, size, labels (such as Inbox, Spam, Promotions) and the List-Unsubscribe header. <strong>Never the message body or attachments.</strong></td><td>To group your mail by sender and category, show which senders fill your mailbox, and offer to unsubscribe or clean up</td></tr>
+<tr><td>Move email (<code>gmail.modify</code>)</td><td>Moves emails you choose to Gmail's Trash, and moves email wrongly in Spam back to your inbox</td><td>Only when you confirm it on screen. This permission is asked for separately, the first time you choose to trash something</td></tr>
+</table></div>
+<h3>How Google user data is handled</h3>
 <ul>
-<li>Cora reads <strong>message metadata only</strong> — sender, subject, date, labels, size and the unsubscribe header — never the body of your emails.</li>
-<li>Moving mail to Trash, unsubscribing or taking mail out of Spam happens <strong>only when you confirm it</strong>, one action at a time. Cora cannot permanently delete email.</li>
-<li>Your Gmail data is processed on your phone and stored only in Cora's private storage on your phone. It is never sent to us, never sold, and <strong>never used for advertising</strong>.</li>
-<li>Cora's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</li>
-<li>You can disconnect at any time in your <a href="https://myaccount.google.com/permissions">Google Account permissions</a>; uninstalling Cora deletes all mail data it stored.</li>
+<li><strong>Stored on your phone only</strong>, in Cora's private app storage, which other apps cannot read. Cora has no server: your Gmail data is never sent to us or to anyone else.</li>
+<li><strong>Not shared, not sold, not used for advertising</strong>, and not used to train any AI or machine-learning model. No person reads your email.</li>
+<li><strong>Every change is yours:</strong> Cora never sends, permanently deletes or edits email. Moved email stays in Gmail's Trash for 30 days, where you can restore it, and each clean-up is recorded on the phone so it can be undone.</li>
+<li><strong>Kept until you remove it:</strong> mail details stay on the phone until you disconnect the account or uninstall Cora. Uninstalling Cora, or clearing its storage, deletes all mail data it stored.</li>
+<li><strong>Disconnect any time</strong> in your <a href="https://myaccount.google.com/permissions">Google Account → Third-party access</a>. Cora then cannot read anything more.</li>
+<li>Connections to Gmail are encrypted (HTTPS).</li>
 </ul>
+<p><strong>Limited Use.</strong> Cora's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
 
 <h2>5. What we do not do</h2>
 <ul>
